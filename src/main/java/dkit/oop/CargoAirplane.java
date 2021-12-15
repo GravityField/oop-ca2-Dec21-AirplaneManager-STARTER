@@ -24,7 +24,7 @@ private final int currentLoad;
         return "CargoAirplane{" +
                 "MAX_LOAD_KILOS=" + MAX_LOAD_KILOS +
                 ", currentLoad=" + currentLoad +
-                '}';
+                '}' + super.toString();
     }
 } // END of CargoAirplane class.
 

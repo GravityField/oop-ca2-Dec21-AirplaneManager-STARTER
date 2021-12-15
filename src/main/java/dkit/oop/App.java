@@ -30,12 +30,19 @@ public class App
         AirplaneManager mgr = new AirplaneManager();
 
         //Q2
-//         PassengerAirplane passengerPlane1 = new PassengerAirplane("Boeing 747",524);
-//         PassengerAirplane passengerPlane2 = new PassengerAirplane("Airbus 380",525);
+         PassengerAirplane passengerPlane1 = new PassengerAirplane("Boeing 747",524);
+         PassengerAirplane passengerPlane2 = new PassengerAirplane("Airbus 380",525);
+        System.out.println(passengerPlane1);
+        System.out.println(passengerPlane2);
+
 //         //Add passengers to Passenger planes
-//         passengerPlane1.addPassenger("Tom Hardy");
-//         passengerPlane1.addPassenger("Margot Robbie");
-//         passengerPlane2.addPassenger("Emma Thompson");
+         passengerPlane1.addPassenger("Tom Hardy");
+         passengerPlane1.addPassenger("Margot Robbie");
+         passengerPlane2.addPassenger("Emma Thompson");
+
+        System.out.println(passengerPlane1);
+        System.out.println(passengerPlane2);
+
 
         //Q3
 
