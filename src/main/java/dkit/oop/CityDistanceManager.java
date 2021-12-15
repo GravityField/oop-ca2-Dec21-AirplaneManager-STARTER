@@ -14,10 +14,18 @@ public class CityDistanceManager {
             };
 
     CityDistanceManager(){};    // constructor;
+    public CityDistanceManager(String[] cities, int[][] distances) {
+        this.cities = cities;
+        this.distances = distances;
+    }
 
     // Q4.1
     public int findDistanceBetween(String city1, String city2) {
         // write code here
+        int distance;
+        int pos1 = 0;
+        int pos2 = 0;
+
         return 0;
     }
 
