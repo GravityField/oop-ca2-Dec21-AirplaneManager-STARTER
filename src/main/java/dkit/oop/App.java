@@ -1,5 +1,7 @@
 package dkit.oop;
 
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -30,6 +32,7 @@ public class App
         AirplaneManager mgr = new AirplaneManager();
 
         //Q2
+        System.out.println("Question 2");
          PassengerAirplane passengerPlane1 = new PassengerAirplane("Boeing 747",524);
          PassengerAirplane passengerPlane2 = new PassengerAirplane("Airbus 380",525);
         System.out.println(passengerPlane1);
@@ -47,6 +50,38 @@ public class App
         //Q3
 
         // write calls to methods implemented for Q3.
+        System.out.println("Question 3");
+        mgr.add(cargoPlane1);
+        mgr.add(cargoPlane2);
+        mgr.add(passengerPlane1);
+        mgr.add(passengerPlane2);
+
+        System.out.println("Display All Airplanes");
+        mgr.displayAllAirplanes();
+        System.out.println("Display Passenger Planes");
+        mgr.displayAllPassengerAirplanes();
+        System.out.println("Return List of Cargo Planes");
+        List<CargoAirplane> returnedPlanes = mgr.getAllCargoAirplanes();
+        System.out.println(returnedPlanes);
+
+        int planeId = passengerPlane1.getId();
+        boolean added = mgr.addPassengerNameToAirplane(planeId, "James May");
+        if(added)
+        {
+            System.out.println("Passenger Has Been Added");
+        }
+        else
+        {
+            System.out.println("Passenger Not Added");
+        }
+        System.out.println(passengerPlane1);
+
+
+        boolean isThere = mgr.containsAirplane(passengerPlane1);
+        System.out.println(isThere);
+
+
+
 
 
         //Question 4
