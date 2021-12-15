@@ -78,10 +78,29 @@ public class App
 
 
         boolean isThere = mgr.containsAirplane(passengerPlane1);
-        System.out.println(isThere);
+        if(isThere)
+        {
+            System.out.println("Plane is there");
+        }
+        else{
+            System.out.println("Not there");
+        }
 
+        Airplane resultPlane = mgr.findAirplaneByPassengerName("James May");
+        if(resultPlane != null) {
+            System.out.println(resultPlane);
+        }
+        else
+        {
+            System.out.println("No Plane with that passenger was found");
+        }
 
+        System.out.println("Unsorted");
+        mgr.displayAllAirplanes();
 
+        System.out.println("Sorted");
+
+        mgr.displayAllAirplanesInOrderOfType();
 
 
         //Question 4

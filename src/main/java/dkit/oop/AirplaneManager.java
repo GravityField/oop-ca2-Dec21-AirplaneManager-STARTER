@@ -2,6 +2,8 @@ package dkit.oop;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -84,11 +86,39 @@ public class AirplaneManager {
 
 
     // write findAirplaneByPassengerName( passengerName )
+    public Airplane findAirplaneByPassengerName( String passengerName )
+    {
+        for (Airplane a : airplaneList) {
+            if (a instanceof PassengerAirplane && ((PassengerAirplane) a).passengerList.contains(passengerName)) {
 
+                return a;
+            }
+        }
+
+
+        return null;
+    }
 
 
     // write displayAllAirplanesInOrderOfType( argument )
 
+    public static class PlaneTypeComparator implements Comparator<Airplane> {
+
+        public int compare(Airplane a1, Airplane a2) {
+            return a1.getType().compareTo(a2.getType());
+        }
+    }
+
+    PlaneTypeComparator planeTypeComparator = new PlaneTypeComparator();
+    public void displayAllAirplanesInOrderOfType()
+    {
+        Collections.sort(airplaneList, planeTypeComparator);
+        for (Airplane a : airplaneList) {
+            System.out.println(a);
+        }
+
+
+    }
 
 } // end of AirplaneManager
 
