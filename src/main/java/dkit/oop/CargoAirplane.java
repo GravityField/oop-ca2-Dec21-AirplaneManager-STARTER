@@ -6,8 +6,7 @@ public class CargoAirplane extends Airplane{
 
     // fields (ref. Q1)
 private final int MAX_LOAD_KILOS;
-private int currentLoad;
-ArrayList<String> passengerList;
+private final int currentLoad;
     // constructor
 
     public CargoAirplane(String type, int maxLoad) {
@@ -25,7 +24,6 @@ ArrayList<String> passengerList;
         return "CargoAirplane{" +
                 "MAX_LOAD_KILOS=" + MAX_LOAD_KILOS +
                 ", currentLoad=" + currentLoad +
-                ", passengerList=" + passengerList +
                 '}';
     }
 } // END of CargoAirplane class.
